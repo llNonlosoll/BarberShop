@@ -1,4 +1,14 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 888;
+
+  width: 100%;
+
+  background-color: rgba(25, 28, 38, 0.5);
+  backdrop-filter: blur(4px);
+
   .container {
     display: flex;
     justify-content: space-between;
