@@ -1,14 +1,13 @@
+/* font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif; */
 body {
-  color: var(--main-text-color);
-  font-family: "Roboto", sans-serif;
+  color: #555555;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
-  font-size: 16px;
-  line-height: 1.5;
-  /*
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Raleway', sans-serif;*/
-  background-color: var(--main-color);
+  font-size: 14px;
+  line-height: 1.67;
+  background-color: #ffffff;
 }
 
 h1,
@@ -69,4 +68,188 @@ ul {
   .container {
     width: 1158px;
   }
+}
+.button-online-booking {
+  display: block;
+  width: 160px;
+  padding: 12px 18px;
+  color: #303030;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .header .header-nav-container {
+    display: none;
+  }
+}
+
+.mobile-open-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-open-btn:hover, .mobile-open-btn:focus {
+  background-color: #ff6c00;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 118px;
+  padding-bottom: 227px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mobile-close-button {
+  position: absolute;
+  top: 48px;
+  right: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-close-button:hover, .mobile-close-button:focus {
+  background-color: #ff6c00;
+}
+
+.mobile-menu-btn {
+  fill: currentColor;
+}
+
+.mobile-nav .link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+.mobile-nav .link:hover, .mobile-nav .link:focus {
+  color: #ff6c00;
+}
+.mobile-nav .item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mobile-nav {
+  margin-bottom: auto;
+}
+
+.phone {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.menu-container .button-online-booking {
+  margin-bottom: 64px;
+}
+
+.social .link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+.social .item:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+.social .item:first-child::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 40px;
+  background-color: #303030;
+}
+.social .item:last-child {
+  margin-left: 100px;
 }/*# sourceMappingURL=style.css.map */

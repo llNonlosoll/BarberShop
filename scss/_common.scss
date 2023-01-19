@@ -1,15 +1,15 @@
+/* font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif; */
+
 body {
-  color: var(--main-text-color);
-  font-family: 'Roboto', sans-serif;
+  color: #555555;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
-  font-size: 16px;
-  line-height: 1.5;
-  /*
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Raleway', sans-serif;*/
+  font-size: 14px;
+  line-height: 1.67;
 
-  background-color: var(--main-color);
+  background-color: #ffffff;
 }
 
 h1,
@@ -73,4 +73,21 @@ ul {
   .container {
     width: 1158px;
   }
+}
+
+.button-online-booking {
+  display: block;
+  width: 160px;
+  padding: 12px 18px;
+
+  color: #303030;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
 }

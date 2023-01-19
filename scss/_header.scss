@@ -1,0 +1,15 @@
+.header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .header-nav-container {
+      display: none;
+    }
+  }
+}
