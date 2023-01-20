@@ -1,8 +1,5 @@
-/* font-family: 'Open Sans', sans-serif;
-  font-family: 'Raleway', sans-serif; */
-
 body {
-  color: #555555;
+  color: #303030;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -86,12 +83,49 @@ ul {
   }
 }
 
+.section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+}
+
+.uppertitle {
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+
+    background-color: #303030;
+  }
+
+  &.black {
+    color: rgba(157, 164, 189, 0.6);
+
+    &::before {
+      background-color: rgba(157, 164, 189, 0.6);
+    }
+  }
+}
+
 .button-online-booking {
   display: block;
   width: 160px;
   padding: 12px 18px;
 
-  color: #303030;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;

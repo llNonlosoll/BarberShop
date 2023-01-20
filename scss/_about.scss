@@ -1,8 +1,28 @@
 .about {
-  padding-top: 84px;
-  padding-bottom: 84px;
-
   .list {
     display: none;
+  }
+
+  .about-right-side {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.62;
+    color: #555555;
+  }
+
+  .about-desc {
+    line-height: 1.86;
+    color: #555555;
   }
 }
