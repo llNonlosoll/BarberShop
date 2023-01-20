@@ -104,8 +104,8 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 767px) {
   .header .header-nav-container {
@@ -129,7 +129,118 @@ ul {
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../img/hero/hero@2x.jpg);
   }
 }
+.hero .title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.hero .text {
+  line-height: 1.62;
+  color: #9da4bd;
+}
 
+.upper-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+.upper-text::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.upper-text {
+  -webkit-animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+          animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+}
+
+.hero .title {
+  -webkit-animation: right-to-left 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+          animation: right-to-left 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+}
+
+.hero .text {
+  width: 360px;
+  -webkit-animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+          animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+}
+
+@-webkit-keyframes vertical-move {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(calc(100px * var(--idx)));
+            transform: translateY(calc(100px * var(--idx)));
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes vertical-move {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(calc(100px * var(--idx)));
+            transform: translateY(calc(100px * var(--idx)));
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes right-to-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes right-to-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 /*.hero {
   margin-left: auto;
   margin-right: auto;
@@ -180,6 +291,14 @@ ul {
       url(../images/people-office-pc@2x.jpg);
   }
 }*/
+.about {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+.about .list {
+  display: none;
+}
+
 .mobile-open-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,7 +334,7 @@ ul {
 .menu-container {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,7 +342,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
   padding-top: 118px;
   padding-bottom: 227px;
