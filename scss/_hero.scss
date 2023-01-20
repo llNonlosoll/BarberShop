@@ -1,4 +1,6 @@
 .hero {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 208px;
   padding-bottom: 209px;
 
@@ -61,7 +63,6 @@
 }
 
 .hero .text {
-  width: 360px;
   animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
 }
 
