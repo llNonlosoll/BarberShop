@@ -34,15 +34,15 @@
 }
 
 .hero .uppertitle {
-  animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+  animation: vertical-move 1000ms cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
 }
 
 .hero .title {
-  animation: right-to-left 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+  animation: right-to-left 1000ms cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
 }
 
 .hero .text {
-  animation: vertical-move 1s cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
+  animation: vertical-move 1000ms cubic-bezier(0.4, 0, 0.2, 1) calc(500ms * var(--shift)) both;
 }
 
 @keyframes vertical-move {

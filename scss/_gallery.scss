@@ -1,0 +1,11 @@
+.gallery {
+  .uppertitle {
+    margin-bottom: 71px;
+  }
+}
+
+.gallery-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
