@@ -463,11 +463,10 @@
         <section class="booking section">
           <div class="container">
             <h2 class="title">Online-booking</h2>
-            <form action="" class="online-booking-form">
+            <form class="online-booking-form">
               <label for="user-name" class="booking-form-input-desc"
                 >Name*
                 <input
-                  autofocus
                   id="user-name"
                   type="text"
                   name="user-name"
@@ -612,7 +611,7 @@
             <div class="modal-form-input-thumb">
               <input
                 autofocus
-                id="user-name"
+                id="user-name-modal"
                 type="text"
                 name="user-name"
                 class="modal-form-input"
@@ -627,7 +626,7 @@
             <label for="user-phone" class="modal-input-desc">Phone*</label>
             <div class="modal-form-input-thumb">
               <input
-                id="user-phone"
+                id="user-phone-modal"
                 type="tel"
                 name="user-phone"
                 class="modal-form-input"
@@ -641,7 +640,12 @@
             </div>
             <label for="user-email" class="modal-input-desc">Email</label>
             <div class="modal-form-input-thumb">
-              <input id="user-email" type="email" name="user-email" class="modal-form-input" />
+              <input
+                id="user-email-modal"
+                type="email"
+                name="user-email"
+                class="modal-form-input"
+              />
               <svg class="modal-form-input-icon" width="18px" height="18px">
                 <use href="./img/svg/icons.svg#icon-email"></use>
               </svg>
