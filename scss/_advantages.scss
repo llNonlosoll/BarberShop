@@ -9,7 +9,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 
-    font-size: 42px;
+    font-size: 41px;
     line-height: 1.17;
     letter-spacing: 0.05em;
   }
@@ -27,6 +27,12 @@
     align-items: center;
     row-gap: 30px;
 
+    @media screen and (min-width: 448px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 0px;
+    }
+
     .item {
       display: flex;
       flex-direction: column;
@@ -39,10 +45,12 @@
       /*flex-basis: calc((100% - 30px) / 2);*/
       background-color: #f7f7f7;
 
-      /*&:nth-child(2n) {
-        margin-top: 30px;
-        margin-left: 30px;
-      }*/
+      @media screen and (min-width: 448px) {
+        &:nth-child(2n) {
+          margin-top: 30px;
+          margin-left: 30px;
+        }
+      }
 
       .advantages-list-number {
         position: relative;

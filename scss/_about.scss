@@ -13,6 +13,9 @@
     font-size: 28px;
     line-height: 1.18;
     letter-spacing: 0.05em;
+    @media screen and (min-width: 448px) {
+      width: 306px;
+    }
   }
 
   .about-text {

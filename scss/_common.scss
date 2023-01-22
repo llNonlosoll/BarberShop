@@ -63,11 +63,9 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
 
-@media screen and (min-width: 428px) {
-  .container {
-    width: 428px;
+  @media screen and (min-width: 448px) {
+    width: 448px;
   }
 }
 

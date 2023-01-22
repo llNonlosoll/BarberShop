@@ -8,4 +8,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+
+  .gallery-list-item {
+    @media screen and (min-width: 448px) {
+      max-width: 418px;
+    }
+  }
 }
