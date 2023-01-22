@@ -1,0 +1,241 @@
+/*==================== Backdrop - modal window ====================*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(46, 47, 66, 0.4);
+  backdrop-filter: blur(4px);
+
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    visibility: hidden;
+    scale: 0.5;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 428px) {
+    width: 410px;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  background-color: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    background-color: #ff6c00;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .close-button-icon {
+    fill: currentColor;
+  }
+}
+
+/*==================== Modal form ====================*/
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  .modal-text {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 16px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .modal-input-desc {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  .modal-form-input-thumb {
+    position: relative;
+
+    margin-bottom: 8px;
+
+    color: #303030;
+
+    .modal-form-input {
+      width: 100%;
+      height: 40px;
+      padding-left: 38px;
+
+      font-size: 12px;
+
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+
+      transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border: 1px solid #ff6c00;
+      }
+
+      &:focus + .modal-form-input-icon {
+        fill: #ff6c00;
+      }
+    }
+
+    .modal-form-input-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+
+      fill: currentColor;
+
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  .modal-textarea {
+    margin-bottom: 16px;
+
+    .modal-form-message {
+      resize: none;
+      width: 100%;
+      height: 120px;
+      padding: 8px 16px;
+
+      font-size: 12px;
+
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border: 1px solid #ff6c00;
+      }
+
+      &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+  }
+
+  .button-online-booking {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+  }
+}
+
+.modal-form-agree-desc {
+  position: relative;
+
+  margin-bottom: 16px;
+  padding-left: 24px;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #303030;
+
+  .modal-agree-link {
+    color: #303030;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: #ff6c00;
+    }
+  }
+
+  .modal-desc-icon-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    color: transparent;
+
+    border: 1.25px solid #303030;
+    border-radius: 2px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-desc-icon {
+      fill: currentColor;
+    }
+  }
+
+  .modal-form-agree:checked + .modal-desc-icon-thumb {
+    color: #303030;
+    background-color: #ff6c00;
+  }
+
+  .modal-form-agree:focus + .modal-desc-icon-thumb {
+    border: 1.25px solid #ff6c00;
+  }
+}

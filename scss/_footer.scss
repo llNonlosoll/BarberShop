@@ -1,0 +1,35 @@
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 40px;
+
+  .item {
+    .link {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 1.36;
+      color: #303030;
+    }
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+        margin-right: 40px;
+        background-color: #303030;
+      }
+    }
+  }
+}
+
+.footer-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: #9da4bd;
+}
