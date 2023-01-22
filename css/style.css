@@ -739,12 +739,24 @@ select:-webkit-autofill:focus {
 .barbers {
   background-color: #f7f7f7;
 }
+@media screen and (min-width: 768px) {
+  .barbers .uppertitle {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .barbers .title {
   margin-top: 20px;
   margin-bottom: 44px;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+}
+@media screen and (min-width: 768px) {
+  .barbers .title {
+    text-align: center;
+  }
 }
 
 .barbers-list {
@@ -757,6 +769,13 @@ select:-webkit-autofill:focus {
           flex-direction: column;
   row-gap: 30px;
 }
+@media screen and (min-width: 768px) {
+  .barbers-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .barbers-list > .item {
   -webkit-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
           box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -765,6 +784,11 @@ select:-webkit-autofill:focus {
 @media screen and (min-width: 448px) {
   .barbers-list > .item {
     max-width: 418px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .barbers-list > .item {
+    max-width: 450px;
   }
 }
 
