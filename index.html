@@ -29,36 +29,18 @@
           <div class="header-nav-container">
             <nav class="header-nav">
               <ul class="main-nav list">
-                <li class="main-nav-item"><a class="link" href="#about">About</a></li>
-                <li class="main-nav-item">
-                  <a class="link" href="#prices">Services and prices</a>
-                </li>
-                <li class="main-nav-item"><a class="link" href="#barbers">Barbers</a></li>
-                <li class="main-nav-item"><a class="link" href="#contacts">Contacts</a></li>
+                <li class="item"><a href="#about" class="link">About</a></li>
+                <li class="item"><a href="#prices" class="link">Services and prices</a></li>
+                <li class="item"><a href="#barbers" class="link">Barbers</a></li>
+                <li class="item"><a href="#contacts" class="link">Contacts</a></li>
               </ul>
             </nav>
-            <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button type="button">Online-booking</button>
-            <ul class="header-nav-social list">
-              <li class="item">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  href="https://www.instagram.com/"
-                  >Instagram</a
-                >
-              </li>
-              <li class="item">
-                <a
-                  class="link"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  href="https://www.youtube.com/"
-                  >Youtube</a
-                >
-              </li>
-            </ul>
+            <div class="header-nav-booking">
+              <a href="tel:+380441111111" class="link phone-nav">+38 (044) 111-11-11</a>
+              <button class="button-online-booking black" type="button" data-modal-open>
+                Online-booking
+              </button>
+            </div>
           </div>
           <button
             type="button"
@@ -75,20 +57,70 @@
       <main>
         <section class="hero">
           <div class="container">
-            <p class="uppertitle black" style="--idx: -1; --shift: 1">
-              A hair salon for men in Kyiv
-            </p>
-            <h1 class="title" style="--shift: 2">BarberShop</h1>
-            <p class="text" style="--idx: 1; --shift: 3">
-              We are experts in trendy men's haircuts. We work quickly, carefully and with style.
-            </p>
+            <div class="hero-left">
+              <ul class="header-nav-social list">
+                <li class="item">
+                  <a
+                    class="link"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    href="https://www.instagram.com/"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="item">
+                  <a
+                    class="link"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    href="https://www.youtube.com/"
+                    >Youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="hero-right">
+              <p class="uppertitle black" style="--idx: -1; --shift: 1">
+                A hair salon for men in Kyiv
+              </p>
+              <h1 class="title" style="--shift: 2">BarberShop</h1>
+              <p class="text" style="--idx: 1; --shift: 3">
+                We are experts in trendy men's haircuts. We work quickly, carefully and with style.
+              </p>
+            </div>
           </div>
         </section>
         <section class="about section" id="about">
           <div class="container">
             <ul class="list">
-              <li><img src="" alt="" /></li>
-              <li><img src="" alt="" /></li>
+              <li class="item">
+                <img
+                  srcset="
+                    ./img/about/about1-pc.jpg        270w,
+                    ./img/about/about1-pc@2x.jpg     540w,
+                    ./img/about/about1-tablet.jpg    330w,
+                    ./img/about/about1-tablet@2x.jpg 660w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+                  src="./img/about/about1-tablet.jpg"
+                  alt="beard trimming"
+                  loading="lazy"
+                />
+              </li>
+              <li class="item">
+                <img
+                  srcset="
+                    ./img/about/about2-pc.jpg        270w,
+                    ./img/about/about2-pc@2x.jpg     540w,
+                    ./img/about/about2-tablet.jpg    330w,
+                    ./img/about/about2-tablet@2x.jpg 660w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+                  src="./img/about/about2-tablet.jpg"
+                  alt="manual haircut"
+                  loading="lazy"
+                />
+              </li>
             </ul>
             <div class="about-right-side">
               <p class="uppertitle">About</p>

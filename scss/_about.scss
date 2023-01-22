@@ -1,6 +1,23 @@
 .about {
+  .container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      column-gap: 30px;
+    }
+  }
+
   .list {
     display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    .item {
+      max-width: 330px;
+    }
   }
 
   .about-right-side {
