@@ -69,15 +69,13 @@ ul {
   }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 39px;
-    padding-right: 39px;
+    width: 720px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1158px;
+    width: 1200px;
   }
 }
 
@@ -140,11 +138,21 @@ ul {
 
   &.black {
     color: #ffffff;
+
+    .link {
+      display: block;
+      color: #ffffff;
+    }
   }
 
   &:hover,
   &:focus {
     background-color: #ff6c00;
+  }
+
+  .link {
+    display: block;
+    color: #303030;
   }
 }
 

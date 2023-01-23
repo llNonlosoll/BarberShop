@@ -1,9 +1,9 @@
 .barbers {
   background-color: #f7f7f7;
 
-  .uppertitle {
-    @media screen and (min-width: 768px) {
-      justify-content: center;
+  .barbers-container {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 450px;
     }
   }
 
@@ -14,19 +14,20 @@
     font-size: 42px;
     line-height: 1.17;
     letter-spacing: 0.05em;
-
-    @media screen and (min-width: 768px) {
-      text-align: center;
-    }
   }
 }
 
 .barbers-list {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  gap: 30px;
 
   @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
     align-items: center;
   }
 
@@ -41,6 +42,10 @@
 
     @media screen and (min-width: 768px) {
       max-width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 370px;
     }
   }
 }
@@ -90,9 +95,9 @@
     &:focus {
       color: #ff6c00;
     }
-  }
 
-  .barber-social-icon {
-    fill: currentColor;
+    .barber-social-icon {
+      fill: currentColor;
+    }
   }
 }

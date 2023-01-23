@@ -5,38 +5,66 @@
   z-index: 888;
 
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   background-color: rgba(25, 28, 38, 0.5);
   backdrop-filter: blur(4px);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
 
     @media screen and (min-width: 768px) {
       justify-content: center;
-      column-gap: 25px;
+      align-items: flex-start;
     }
 
-    .header-nav-container {
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-thumb {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 12px;
+      }
+    }
+
+    .header-nav {
       @media screen and (max-width: 767px) {
         display: none;
       }
 
       display: flex;
-      align-items: center;
-      column-gap: 25px;
+      margin-left: 48px;
+
+      @media screen and (min-width: 1200px) {
+        margin-left: 100px;
+      }
 
       .main-nav {
         display: flex;
-        justify-content: center;
         align-items: center;
         column-gap: 20px;
 
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          padding-top: 32px;
+          padding-bottom: 50px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          column-gap: 30px;
+        }
+
         .link {
+          display: block;
           font-weight: 600;
           font-size: 12px;
           line-height: 1.33;
@@ -52,19 +80,44 @@
           }
         }
       }
+    }
 
-      .header-nav-booking {
-        .phone-nav {
-          @media screen and (max-width: 1200px) {
-            display: none;
-          }
+    .header-nav-booking {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
 
-          font-weight: 600;
-          font-size: 12px;
-          line-height: 1.33;
-          letter-spacing: 0.1em;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
 
-          color: #ffffff;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 45px;
+        padding-top: 20px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        gap: 43px;
+
+        margin-left: auto;
+      }
+
+      .phone-nav {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.1em;
+
+        color: #ffffff;
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+          color: #ff6c00;
         }
       }
     }

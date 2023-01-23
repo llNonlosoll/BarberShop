@@ -4,6 +4,11 @@
     flex-direction: column-reverse;
     row-gap: 44px;
 
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
     .title {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -31,7 +36,13 @@
 .advantages-left {
   @media screen and (min-width: 768px) {
     align-self: flex-end;
+
     max-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+    margin-right: 130px;
   }
 
   .list {
@@ -61,6 +72,10 @@
 
       @media screen and (min-width: 768px) {
         width: 210px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 170px;
       }
 
       @media screen and (min-width: 448px) {

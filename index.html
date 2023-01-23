@@ -21,26 +21,26 @@
     <div class="page">
       <header class="header">
         <div class="container">
-          <a class="logo link" href="./">
-            <svg class="logo-icon" width="69px" height="56px">
-              <use href="./img/svg/icons.svg#icon-logo"></use>
-            </svg>
-          </a>
-          <div class="header-nav-container">
-            <nav class="header-nav">
-              <ul class="main-nav list">
-                <li class="item"><a href="#about" class="link">About</a></li>
-                <li class="item"><a href="#prices" class="link">Services and prices</a></li>
-                <li class="item"><a href="#barbers" class="link">Barbers</a></li>
-                <li class="item"><a href="#contacts" class="link">Contacts</a></li>
-              </ul>
-            </nav>
-            <div class="header-nav-booking">
-              <a href="tel:+380441111111" class="link phone-nav">+38 (044) 111-11-11</a>
-              <button class="button-online-booking black" type="button" data-modal-open>
-                Online-booking
-              </button>
-            </div>
+          <div class="logo-thumb">
+            <a class="logo link" href="./">
+              <svg class="logo-icon" width="69px" height="56px">
+                <use href="./img/svg/icons.svg#icon-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="header-nav">
+            <ul class="main-nav list">
+              <li class="item"><a href="#about" class="link">About</a></li>
+              <li class="item"><a href="#prices" class="link">Services and prices</a></li>
+              <li class="item"><a href="#barbers" class="link">Barbers</a></li>
+              <li class="item"><a href="#contacts" class="link">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="header-nav-booking">
+            <a href="tel:+380441111111" class="link phone-nav">+38 (044) 111-11-11</a>
+            <button class="button-online-booking black" type="button" data-modal-open>
+              Online-booking
+            </button>
           </div>
           <button
             type="button"
@@ -58,7 +58,7 @@
         <section class="hero">
           <div class="container">
             <div class="hero-left">
-              <ul class="header-nav-social list">
+              <ul class="hero-nav-social list">
                 <li class="item">
                   <a
                     class="link"
@@ -95,6 +95,7 @@
             <ul class="list">
               <li class="item">
                 <img
+                  class="img"
                   srcset="
                     ./img/about/about1-pc.jpg        270w,
                     ./img/about/about1-pc@2x.jpg     540w,
@@ -109,6 +110,7 @@
               </li>
               <li class="item">
                 <img
+                  class="img"
                   srcset="
                     ./img/about/about2-pc.jpg        270w,
                     ./img/about/about2-pc@2x.jpg     540w,
@@ -134,7 +136,9 @@
                 again. We are a team that is always "on the same wave" with clients. Therefore, we
                 are always ready to improve everyone who comes to us!
               </p>
-              <button class="button-online-booking" type="button">Online-booking</button>
+              <div class="button-online-booking">
+                <a class="link" href="#online-booking">Online-booking</a>
+              </div>
             </div>
           </div>
         </section>
@@ -174,7 +178,9 @@
                 </li>
               </ul>
             </div>
-            <button class="button-online-booking black" type="button">Online-booking</button>
+            <div class="button-online-booking black">
+              <a class="link" href="#online-booking">Online-booking</a>
+            </div>
           </div>
         </section>
         <section class="advantages section">
@@ -210,7 +216,7 @@
           </div>
         </section>
         <section class="barbers section" id="barbers">
-          <div class="container">
+          <div class="container barbers-container">
             <p class="uppertitle">For true enjoyers of the atmosphere</p>
             <h2 class="title">Our barbers</h2>
             <ul class="list barbers-list">
@@ -230,7 +236,6 @@
                   />
                   <img
                     class="img"
-                    srcset="./img/barbers/smith-mob.jpg 1x, ./img/barbers/smith-mob@2x.jpg 2x"
                     src="./img/barbers/smith-mob.jpg"
                     alt="Barber John Smith"
                     loading="lazy"
@@ -307,7 +312,6 @@
                   />
                   <img
                     class="img"
-                    srcset="./img/barbers/doe-mob.jpg 1x, ./img/barbers/doe-mob@2x.jpg 2x"
                     src="./img/barbers/doe-mob.jpg"
                     alt="Barber Michele Doe"
                     loading="lazy"
@@ -384,7 +388,6 @@
                   />
                   <img
                     class="img"
-                    srcset="./img/barbers/black-mob.jpg 1x, ./img/barbers/black-mob@2x.jpg 2x"
                     src="./img/barbers/black-mob.jpg"
                     alt="Barber Alan Black"
                     loading="lazy"
@@ -456,27 +459,36 @@
               <li class="gallery-list-item">
                 <picture>
                   <source
+                    srcset="./img/gallery/1-pc.jpg 1x, ./img/gallery/1-pc@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/gallery/1-tablet.jpg 1x, ./img/gallery/1-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
                     srcset="./img/gallery/1-mob.jpg 1x, ./img/gallery/1-mob@2x.jpg 2x"
                     media="(min-width: 320px)"
                   />
-                  <img
-                    class="img"
-                    srcset="./img/gallery/1-mob.jpg 1x, ./img/gallery/1-mob@2x.jpg 2x"
-                    src="./img/gallery/1-mob.jpg"
-                    alt="haircut"
-                    loading="lazy"
-                  />
+                  <img class="img" src="./img/gallery/1-mob.jpg" alt="haircut" loading="lazy" />
                 </picture>
               </li>
               <li class="gallery-list-item">
                 <picture>
+                  <source
+                    srcset="./img/gallery/2-pc.jpg 1x, ./img/gallery/2-pc@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/gallery/2-tablet.jpg 1x, ./img/gallery/2-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
                   <source
                     srcset="./img/gallery/2-mob.jpg 1x, ./img/gallery/2-mob@2x.jpg 2x"
                     media="(min-width: 320px)"
                   />
                   <img
                     class="img"
-                    srcset="./img/gallery/2-mob.jpg 1x, ./img/gallery/2-mob@2x.jpg 2x"
                     src="./img/gallery/2-mob.jpg"
                     alt="beard trimming"
                     loading="lazy"
@@ -486,12 +498,19 @@
               <li class="gallery-list-item">
                 <picture>
                   <source
+                    srcset="./img/gallery/3-pc.jpg 1x, ./img/gallery/3-pc@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/gallery/3-tablet.jpg 1x, ./img/gallery/3-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
                     srcset="./img/gallery/3-mob.jpg 1x, ./img/gallery/3-mob@2x.jpg 2x"
                     media="(min-width: 320px)"
                   />
                   <img
                     class="img"
-                    srcset="./img/gallery/3-mob.jpg 1x, ./img/gallery/3-mob@2x.jpg 2x"
                     src="./img/gallery/3-mob.jpg"
                     alt="mustache cutting"
                     loading="lazy"
@@ -501,12 +520,19 @@
               <li class="gallery-list-item">
                 <picture>
                   <source
+                    srcset="./img/gallery/4-pc.jpg 1x, ./img/gallery/4-pc@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./img/gallery/4-tablet.jpg 1x, ./img/gallery/4-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
                     srcset="./img/gallery/4-mob.jpg 1x, ./img/gallery/4-mob@2x.jpg 2x"
                     media="(min-width: 320px)"
                   />
                   <img
                     class="img"
-                    srcset="./img/gallery/4-mob.jpg 1x, ./img/gallery/4-mob@2x.jpg 2x"
                     src="./img/gallery/4-mob.jpg"
                     alt="manual haircut"
                     loading="lazy"
@@ -516,118 +542,135 @@
             </ul>
           </div>
         </section>
-        <section class="booking section">
-          <div class="container">
-            <h2 class="title">Online-booking</h2>
-            <form class="online-booking-form">
-              <label for="user-name" class="booking-form-input-desc"
-                >Name*
-                <input
-                  id="user-name"
-                  type="text"
-                  name="user-name"
-                  class="booking-form-input"
-                  required
-                  pattern="[a-zA-Z]+"
-                  title="a-zA-Z"
-                />
-                <span class="booking-icon-thumb">
-                  <svg class="booking-form-icon" width="18px" height="18px">
-                    <use href="./img/svg/icons.svg#icon-name"></use>
-                  </svg>
-                </span>
-              </label>
-              <label for="user-phone" class="booking-form-input-desc"
-                >Phone*
-                <input
-                  id="user-phone"
-                  type="tel"
-                  name="user-phone"
-                  class="booking-form-input"
-                  required
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                  title="xxx-xxx-xx-xx"
-                />
-                <span class="booking-icon-thumb"
-                  ><svg class="booking-form-icon" width="18px" height="18px">
-                    <use href="./img/svg/icons.svg#icon-phone"></use></svg
-                ></span>
-              </label>
-              <label for="user-email" class="booking-form-input-desc"
-                >Email
-                <input id="user-email" type="email" name="user-email" class="booking-form-input" />
-                <span class="booking-icon-thumb">
-                  <svg class="booking-form-icon" width="18px" height="18px">
-                    <use href="./img/svg/icons.svg#icon-email"></use>
-                  </svg>
-                </span>
-              </label>
-              <label class="booking-form-textarea">
-                Message
-                <textarea
-                  name="user-message"
-                  class="booking-form-textarea-message"
-                  placeholder=""
-                ></textarea>
-              </label>
-              <label class="booking-form-agree-desc">
-                <input
-                  type="checkbox"
-                  name="user-policy"
-                  class="booking-form-agree visually-hidden"
-                  required
-                />
-                <span class="booking-desc-icon-thumb">
-                  <svg class="booking-desc-icon" width="10px" height="8px">
-                    <use href="./img/svg/icons.svg#icon-agree"></use>
-                  </svg>
-                </span>
-                I accept the terms and conditions of the&nbsp;<a href="" class="booking-agree-link"
-                  >Privacy Policy</a
-                >
-              </label>
-              <button type="submit" class="button-online-booking black">Send</button>
-            </form>
-          </div>
-        </section>
-        <section class="contacts section" id="contacts">
-          <div class="container">
-            <h2 class="title">Contacts</h2>
-            <ul class="list contacts-list">
-              <li class="contacts-list-item">
-                <a
-                  class="contacts-link"
-                  href="https://goo.gl/maps/3pXeAVB9wxbDmhNk7"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <svg class="contacts-list-item-icon" width="18px" height="18px">
-                    <use href="./img/svg/icons.svg#icon-map-pin"></use>
-                  </svg>
-                  st. Konovaltsja 36, Kyiv, 02000</a
-                >
-              </li>
-              <li class="contacts-list-item">
-                <a class="contacts-link" href="tel:+380441111111">
-                  <svg class="contacts-list-item-icon" width="18px" height="18px">
-                    <use href="./img/svg/icons.svg#icon-phone"></use>
-                  </svg>
-                  +38 044 111 11 11</a
-                >
-              </li>
-              <li class="contacts-list-item">
-                <a class="contacts-link" href="mailto:barbershop@email.com">
-                  <svg class="contacts-list-item-icon" width="18px" height="18px">
-                    <use href="./img/svg/icons.svg#icon-email"></use>
-                  </svg>
-                  barbershop@email.com</a
-                >
-              </li>
-            </ul>
-            <p class="uppertitle black">Working hours</p>
-            <p class="text">Every day from 9:00 to 22:00</p>
-          </div>
-        </section>
+        <div class="booking-contacts-thumb">
+          <section class="booking section" id="online-booking">
+            <div class="container">
+              <h2 class="title">Online-booking</h2>
+              <form class="online-booking-form">
+                <div class="online-booking-thumb">
+                  <label for="user-name" class="booking-form-input-desc"
+                    >Name*
+                    <input
+                      id="user-name"
+                      type="text"
+                      name="user-name"
+                      class="booking-form-input"
+                      required
+                      pattern="[a-zA-Z]+"
+                      title="a-zA-Z"
+                    />
+                    <span class="booking-icon-thumb">
+                      <svg class="booking-form-icon" width="18px" height="18px">
+                        <use href="./img/svg/icons.svg#icon-name"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label for="user-phone" class="booking-form-input-desc"
+                    >Phone*
+                    <input
+                      id="user-phone"
+                      type="tel"
+                      name="user-phone"
+                      class="booking-form-input"
+                      required
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                      title="xxx-xxx-xx-xx"
+                    />
+                    <span class="booking-icon-thumb"
+                      ><svg class="booking-form-icon" width="18px" height="18px">
+                        <use href="./img/svg/icons.svg#icon-phone"></use></svg
+                    ></span>
+                  </label>
+                  <label for="user-email" class="booking-form-input-desc"
+                    >Email
+                    <input
+                      id="user-email"
+                      type="email"
+                      name="user-email"
+                      class="booking-form-input"
+                    />
+                    <span class="booking-icon-thumb">
+                      <svg class="booking-form-icon" width="18px" height="18px">
+                        <use href="./img/svg/icons.svg#icon-email"></use>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+                <label class="booking-form-textarea">
+                  Message
+                  <textarea
+                    name="user-message"
+                    class="booking-form-textarea-message"
+                    placeholder=""
+                  ></textarea>
+                </label>
+                <label class="booking-form-agree-desc">
+                  <input
+                    type="checkbox"
+                    name="user-policy"
+                    class="booking-form-agree visually-hidden"
+                    required
+                  />
+                  <span class="booking-desc-icon-thumb">
+                    <svg class="booking-desc-icon" width="10px" height="8px">
+                      <use href="./img/svg/icons.svg#icon-agree"></use>
+                    </svg>
+                  </span>
+                  I accept the terms and conditions of the&nbsp;<a
+                    href=""
+                    class="booking-agree-link"
+                    >Privacy Policy</a
+                  >
+                </label>
+                <button type="submit" class="button-online-booking black">Send</button>
+              </form>
+            </div>
+          </section>
+          <section class="contacts section" id="contacts">
+            <div class="container">
+              <h2 class="title">Contacts</h2>
+              <div class="contacts-thumb">
+                <div class="contacts-left">
+                  <ul class="list contacts-list">
+                    <li class="contacts-list-item">
+                      <a
+                        class="contacts-link"
+                        href="https://goo.gl/maps/3pXeAVB9wxbDmhNk7"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                      >
+                        <svg class="contacts-list-item-icon" width="18px" height="18px">
+                          <use href="./img/svg/icons.svg#icon-map-pin"></use>
+                        </svg>
+                        st. Konovaltsja 36, Kyiv, 02000</a
+                      >
+                    </li>
+                    <li class="contacts-list-item">
+                      <a class="contacts-link" href="tel:+380441111111">
+                        <svg class="contacts-list-item-icon" width="18px" height="18px">
+                          <use href="./img/svg/icons.svg#icon-phone"></use>
+                        </svg>
+                        +38 044 111 11 11</a
+                      >
+                    </li>
+                    <li class="contacts-list-item">
+                      <a class="contacts-link" href="mailto:barbershop@email.com">
+                        <svg class="contacts-list-item-icon" width="18px" height="18px">
+                          <use href="./img/svg/icons.svg#icon-email"></use>
+                        </svg>
+                        barbershop@email.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="contacts-right">
+                  <p class="uppertitle black">Working hours</p>
+                  <p class="text">Every day from 9:00 to 22:00</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
       <footer class="footer">
         <div class="container">

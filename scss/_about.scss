@@ -12,11 +12,19 @@
     @media screen and (min-width: 768px) {
       display: flex;
       flex-direction: column;
-      row-gap: 30px;
+      gap: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
     }
 
     .item {
-      max-width: 330px;
+      width: 330px;
+
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }
     }
   }
 
@@ -24,25 +32,25 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-  }
 
-  .title {
-    font-size: 28px;
-    line-height: 1.18;
-    letter-spacing: 0.05em;
-    @media screen and (min-width: 448px) {
-      width: 306px;
+    .title {
+      font-size: 28px;
+      line-height: 1.18;
+      letter-spacing: 0.05em;
+      @media screen and (min-width: 448px) {
+        width: 306px;
+      }
     }
-  }
 
-  .about-text {
-    font-size: 16px;
-    line-height: 1.62;
-    color: #555555;
-  }
+    .about-text {
+      font-size: 16px;
+      line-height: 1.62;
+      color: #555555;
+    }
 
-  .about-desc {
-    line-height: 1.86;
-    color: #555555;
+    .about-desc {
+      line-height: 1.86;
+      color: #555555;
+    }
   }
 }

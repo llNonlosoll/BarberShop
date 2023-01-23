@@ -1,0 +1,27 @@
+.booking-contacts-thumb {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+
+    max-width: 1600px;
+
+    .container {
+      width: 800px;
+    }
+
+    .booking {
+      .container {
+        padding-left: 215px;
+        padding-right: 15px;
+      }
+    }
+
+    .contacts {
+      .container {
+        padding-left: 100px;
+        padding-right: 215px;
+      }
+    }
+  }
+}
