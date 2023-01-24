@@ -171,9 +171,19 @@ select:-webkit-autofill:focus {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: transparent;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-backdrop-filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header.header--no-transparency {
   background-color: rgba(25, 28, 38, 0.5);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
+}
+.header.header--no-transparency .logo-icon {
+  fill: #ffffff;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
